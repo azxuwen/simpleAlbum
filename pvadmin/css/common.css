@@ -1,0 +1,573 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body {
+margin: 0;
+font-family: "Microsoft Yahei",arial,"Hiragino Sans GB",sans-serif;
+font-size: 14px;
+line-height: 20px;
+color: #656D78;
+background-color:#fff;
+position: relative;
+
+}
+html{height:100%;margin:0;padding:0;overflow:hidden}
+body{height:100%;margin:0;padding:0;overflow:hidden;font-family:"Microsoft Yahei"}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+margin:0;padding:0;}
+img{border:0px;}
+a, a:visited{color:#3a3a3a; text-decoration:none; }
+ul,li,li ul{list-style:none;}
+/*--clearfix---*/
+.clearfix:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+.clearfix {display:block;}
+/*--clearfix---*/
+.clear{clear:both;}
+
+
+/*相册列表  index.php 中 展示相册的 div*/
+#album_list{
+	text-align:center;
+	float:left;
+	background:#EAEAEA;
+	width:280px;
+	height:350px;
+	margin-left:20px;
+	border:1px solid rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow   :    #666 2px 3px 2px;
+	-moz-box-shadow   :    #666 2px 3px 2px;
+	box-shadow   :    #666 2px 3px 2px;
+}
+#album_list #album_name{
+	margin-top:3px;
+	color:black;
+}
+#album_img_list{
+	width:280px;
+	height:280px;
+}
+#album_list img{
+	width:280px;
+	height:280px;
+}
+#album_list #content{
+	margin:0;
+	text-align:left;
+	width:280px;
+	height:200px;
+	position:relative;
+	top:-200px;
+	color:white;
+	background:rgba(0, 0, 0, 0.7);
+	display:none;
+}
+
+/*相片列表展示*/
+#photo_list{
+	text-align:center;
+	float:left;
+	width:90px;
+	height:120px;
+	margin:10px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#photo_list img{
+	width:85px;
+	height:90px;
+	border:2px solid white;
+	-webkit-box-shadow   :    #333 1px 1px 2px;
+	-moz-box-shadow   :    #333 1px 1px 2px;
+	box-shadow   :    #333 1px 1px 2px;
+}
+
+
+
+#add_photo_list{
+	text-align:center;
+	float:left;
+	width:120px;
+	height:150px;
+	margin:10px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#add_photo_list img{
+	width:115px;
+	height:120px;
+	border:2px solid white;
+	-webkit-box-shadow   :    #333 1px 1px 2px;
+	-moz-box-shadow   :    #333 1px 1px 2px;
+	box-shadow   :    #333 1px 1px 2px;
+}
+
+
+
+/* 创建新相册 的表单样式 */
+
+.form-4 {
+    /* Size and position */
+    width: 500px;
+    padding: 10px;
+    position: relative;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: black;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.form-4 h1 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.form-4 input[type=text],
+.form-4 textarea,
+.form-4 input[type=password] {
+    /* Size and position */
+    width: 100%;
+    padding: 8px 4px 8px 10px;
+    margin-bottom: 15px;
+
+    /* Styles */
+    border: 1px solid #4e3043; /* Fallback */
+    border: 1px solid rgba(78,48,67, 0.8);
+    background: rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: black;
+    font-size: 13px;
+}
+
+/* Placeholder style (from http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css) */
+
+.form-4 input::-webkit-input-placeholder {
+    color: rgba(37,21,26,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.form-4 input:-moz-placeholder {
+    color: rgba(37,21,26,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.form-4 input:-ms-input-placeholder {
+    color: rgba(37,21,26,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.form-4 input[type=text]:hover,
+.form-4 input[type=password]:hover {
+    border-color: #333;
+}
+
+.form-4 input[type=text]:focus,
+.form-4 input[type=password]:focus,
+.form-4 input[type=button]:focus {
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        0 0 0 3px rgba(255,255,255,0.15);
+    outline: none;
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=text]:focus,
+.no-boxshadow .form-4 input[type=password]:focus {
+    outline: 1px solid white;
+}
+
+.form-4 input[type=button] {
+    /* Size and position */
+    width: 100%;
+    padding: 8px 5px;
+    
+    /* Styles */
+    background: #634056;
+    background: -moz-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -ms-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -o-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(99,64,86,0.5)), to(rgba(76,49,65,0.7)));
+    background: -webkit-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));    
+    border-radius: 5px;
+    border: 1px solid #4e3043;
+    box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 2px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+.form-4 input[type=button]:hover {
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.2), 
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+
+/* Fallback */
+.no-boxshadow .form-4 input[type=button]:hover {
+    background: #594642;
+}
+
+.form-4 label {
+    display: none;
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+
+.form-4 label:hover ~ input {
+    border-color: #333;
+}
+
+.no-placeholder .form-4 label {
+    display: block;
+}
+
+
+
+
+/* 提示div   例如当我创建完新相册之后，立刻就要跳转到上传图片的界面，在这里需要提示一下创建相册成功 */
+#confirm_div{
+	margin:0 auto;
+	width:90%;
+	text-align:center;
+	line-height:30px;
+	height:30px;
+	color:#FF7F00;
+	border:2px solid gray;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-box-shadow   :    #666 2px 3px 2px;
+	-moz-box-shadow   :    #666 2px 3px 2px;
+	box-shadow   :    #666 2px 3px 2px;
+}
+
+/*   START  === 各模块列表中 点击删除具体信息时的弹窗样式*/
+#remove_outer_div{
+	background-color: black;
+    background-color: rgba(0, 0, 0, 0.60);        
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 150;
+    display: none;
+}
+#remove_inner_div{
+	background-color: #0099cc;
+    color: #ddd;
+    border: solid 1px #666666;  
+    box-shadow: 0px 1px 10px #222;
+    padding: 20px 10px 35px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 1510;
+    position: absolute;
+    margin-left: -15%;
+    width: 30%;
+    left: 50%;
+    top: 185px;
+}
+#remove_inner_div h2{
+	font-family:幼圆;
+	text-align:center;
+	font-size:18px;
+	font-weight:bolder;
+	color:white;
+}
+#remove_inner_div button{
+ 		margin: 10px 5px;
+        padding: 5px 10px;
+        text-align: center;
+        background:rgba(0, 0, 144, 0.1);
+        border: 1px solid #222;
+        border-radius: 1px;
+        color: white;
+        font-weight: bold;
+}
+#remove_inner_div button:hover {
+        background-color: #00bbee;
+        cursor: pointer;
+}
+
+#edit_photo_div{
+	display:none;
+	background-color: #B7B7B7;
+    color: #ddd;
+    border: solid 1px #666666;  
+    box-shadow: 0px 1px 10px #222;
+    padding: 20px 10px 35px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 1510;
+    position: absolute;
+    margin-left: -15%;
+    width: 40%;
+    height: 70%; 
+    left: 50%;
+    top: 85px;
+    overflow:auto;
+}
+#edit_photo_div img{
+	width:300px;
+}
+#edit_photo_div textarea{
+	/* Size and position */
+    width: 80%;
+    height : 10%;
+    padding: 8px 4px 8px 10px;
+    margin-bottom: 15px;
+
+    /* Styles */
+    border: 1px solid #4e3043; /* Fallback */
+    border: 1px solid rgba(78,48,67, 0.8);
+    background: rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: black;
+    font-size: 13px;
+}
+
+/*   END  === 各模块列表中 点击删除具体信息时的弹窗样式*/
+
+
+/*执行结果   遮罩层 以及 下面的 div*/
+/*  操作结果  */
+.res_operator{
+	display:none;
+	width:200px;
+	height:80px;
+	background-color:#ADFF2F;
+	position:absolute;
+	top:0;
+	left:550px;
+	z-index:1000;
+	color:white;
+	font-size:17px;
+	border:5px solid white;
+	box-shadow: 0px 1px 10px #222;
+	font-weight:bold;
+}
+.res_operator .res_word{
+	text-align:center;
+	line-height:100px;
+}
+
+
+
+/*暂时 是 上传图片  和 再次上传链接  按钮  的样式*/
+/* button */
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover{text-decoration:none;}
+.button:active{position:relative;top:1px;}
+.bigrounded{-webkit-border-radius:2em;-moz-border-radius:2em;border-radius:2em;}
+.medium{font-size:12px;padding:.4em 1.5em .42em;}
+.small{font-size:11px;padding:.2em 1em .275em;}
+
+/* green */
+.green{
+	color:#e8f0de;
+	border:solid 1px #538312;
+	background:#64991e;
+	background:-webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+	background:-moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.green:hover{
+	background:#538018;
+	background:-webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+	background:-moz-linear-gradient(top,  #6b9d28,  #436b0c);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.green:active{
+	color:#a9c08c;
+	background:-webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+	background:-moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+
+/* red */
+.red{
+	color:#faddde;
+	border:solid 1px #980c10;
+	background:#d81b21;
+	background:-webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
+	background:-moz-linear-gradient(top,  #ed1c24,  #aa1317);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.red:hover{
+	background:#b61318;
+	background:-webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+	background:-moz-linear-gradient(top,  #c9151b,  #a11115);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');
+}
+.red:active{
+	color:#de898c;
+	background:-webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+	background:-moz-linear-gradient(top,  #aa1317,  #ed1c24);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
+}
+
+
+
+/*  分页样式  */
+#page{
+	position:relative;
+	left:720px;
+	top:-10px;
+}
+#page a{
+	color:#CD950C;
+}
+/*主页分页样式*/
+#index_page{
+	position:relative;
+	left:610px;
+	top:20px;
+}
+#index_page a{
+	color:#CD950C;
+}
+
+/*  暂无 内容 样式  */
+#textCenter{
+	text-align:center;
+	color:black;
+	line-height:200px;
+	height:200px;
+}
+
+
+
+
+/*  bkvideo.php  中视频信息的列表    START */
+#bk_video_list{
+	text-align:center;
+	float:left;
+	width:450px;
+	height:420px;
+	margin:10px;
+	-webkit-box-shadow   :    #666 2px 3px 2px;
+	-moz-box-shadow   :    #666 2px 3px 2px;
+	box-shadow   :    #666 2px 3px 2px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#bk_video_content{
+	text-align:center;
+	font-size:20px;
+}
+/*  bkvideo.php  中视频信息的列表    END */
+
+/*  当点击编辑视频信息时，将显示出一个隐藏层 ，这个层的样式 在bkvideo.php */
+#edit_video_div{
+	display:none;
+	background-color: #B7B7B7;
+    color: #ddd;
+    border: solid 1px #666666;  
+    box-shadow: 0px 1px 10px #222;
+    padding: 20px 10px 35px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 1510;
+    position: absolute;
+    margin-left: -15%;
+    width: 40%;
+    height: 70%; 
+    left: 50%;
+    top: 85px;
+    overflow:auto;
+}
+
+
+
+/*  用户列表中的表格样式  */
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	color:#B22222;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+
+
+
+
